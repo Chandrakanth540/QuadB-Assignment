@@ -1,0 +1,12 @@
+.header-wrapper {
+  display: flex;
+  color: red;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-wrapper div {
+  padding: 10px;
+}
+.header-wrapper div img:hover {
+  transform: scale(1.01);
+}

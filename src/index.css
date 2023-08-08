@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: black;
+}
+.homescreen-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.moviecomp-wrapper {
+  padding: 20px;
+}
+.moviecomp-image {
+  width: 200px;
+  height: 200px;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 1.5s ease-in-out, box-shadow 0.5s;
+}
+.moviecomp-title {
+  text-decoration: none;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 0.12rem;
+  font-weight: 600;
+  color: silver;
+  padding: 20px 10px;
+  transition: transform 1.5s ease-in-out, color 0.5s;
+}
+.moviecomp-image:hover {
+  transform: scale(1.04);
+  transition-delay: 0.2s;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px white;
+}
+.moviecomp-title:hover {
+  cursor: pointer;
+  color: whitesmoke;
+}
+a {
+  text-decoration: none;
+}

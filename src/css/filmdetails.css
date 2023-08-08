@@ -1,0 +1,151 @@
+.filmdetail-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .filmdetail-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .bookticket div {
+    font-size: 13px !important;
+    font-weight: 500;
+  }
+}
+.filmdetail-part1 {
+  align-self: center;
+  max-width: 600px;
+  min-width: 400px;
+  padding: 10px;
+  margin-right: 0;
+  animation: img 1s ease-in-out;
+}
+@keyframes img {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.filmdetail-part2 {
+  padding: 10px 40px;
+  overflow: hidden;
+  color: whitesmoke;
+}
+.filmdetail-part1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: 0px 0px 2px #c0c0c0;
+}
+.filmdetail-title {
+  color: #c8c8c8;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
+  height: 19px;
+  background-color: seagreen;
+  margin-bottom: 20px;
+}
+.part2-summary {
+  color: #c8c8c8;
+  text-overflow: ellipsis;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: summary 1s ease-in-out;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  line-height: 1.4rem;
+}
+@keyframes summary {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes odd {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.part2-info-wrap {
+  color: #c8c8c8;
+  text-align: justify;
+  font-family: sans-serif;
+}
+.item:nth-child(even) {
+  animation: summary 1s ease-in-out;
+}
+.item:nth-child(odd) {
+  animation: odd 1s ease-in-out;
+}
+.item {
+  padding: 4px 2px;
+
+  letter-spacing: 0.07rem;
+}
+.item span {
+  color: #686868;
+  font-weight: 600;
+}
+.bookticket {
+  color: black;
+  /* border: 1px solid rebeccapurple; */
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+.bookticket div {
+  border: 1px solid green;
+  padding: 13px 25px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  background-color: #c0c0c0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out, color 0.5s;
+}
+.bookticket div:hover {
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 20px white;
+}
+.ticketcount {
+  color: orange !important;
+  cursor: pointer;
+  user-select: none;
+}
+a {
+  color: black;
+}
+.cancelticket {
+  background-color: #f75d59 !important;
+  color: white !important;
+}
+.cancelticket:hover {
+  border: 1px solid red !important;
+  box-shadow: 0px 0px 20px red !important;
+}
+.checkdetail {
+  color: red;
+  padding: 15px 10px;
+}
+.notfound {
+  color: gray;
+  font-size: 40px;
+  text-align: center;
+}
